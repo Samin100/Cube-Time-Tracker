@@ -14,12 +14,17 @@ for row in sheet.rows:
 cubeTimes.__delitem__(0)  # deletes the 'Time' row
 
 solve_times = []
+bestTime = 999
 for entry in cubeTimes:
     split1 = str.split(entry,':')
     split2 = str.split(split1[1], '.')
     splitted = [split1[0], split2[0], split2[1]]
-    solveTime = int(splitted[0]) + (int(splitted[1]) / 60) + (int(splitted[2]) / 60)
-    solve_times.append(solveTime)
+    timeEntry = int(splitted[0]) + int(splitted[1]) / 60 + (int(splitted[2]) / 3600)
+    solve_times.append(timeEntry)
+
+    if timeEntry < bestTime:
+        bestTime = timeEntry
+
 
 plt.plot(solve_times)
 plt.ylabel('Minutes')
