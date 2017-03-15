@@ -7,4 +7,4 @@ I use www.cubetimer.com to time my solves and record them on a spreadsheet I kee
 # PlotCube.py
 This is a simple Python script that renders a matplotlib plot from the Excel sheet data. The spreadsheet data is stored as text instead of date-time objects so some basic string manipulation has to be done. Here's the result:
 
-![Cube Plot](/figure_1.png?raw=true "Cube Plot")
+![Cube Plot](/plot.png?raw=true "Cube Plot")
