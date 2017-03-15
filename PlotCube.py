@@ -26,6 +26,7 @@ for entry in cubeTimes:
         bestTime = timeEntry
 
 
+print('Best time: ' + str(bestTime // 1) + ' min and '+ str((bestTime * 60) % 60) + ' seconds')
 plt.plot(solve_times)
 plt.ylabel('Minutes')
 plt.xlabel('Cube Solve #')
